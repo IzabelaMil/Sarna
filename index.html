@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Imperialna Sarnia – Luksusowe mięso sarny</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Georgia", serif;
+}
+
+body{
+    background:#0a0a0a;
+    color:#e8e8e8;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 80px;
+    border-bottom:1px solid rgba(255,215,0,0.3);
+}
+
+.logo{
+    font-size:28px;
+    color:gold;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#ddd;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+/* HERO */
+
+.hero{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9));
+}
+
+.hero h1{
+    font-size:60px;
+    color:gold;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:20px;
+    opacity:0.9;
+}
+
+.btn{
+    margin-top:40px;
+    padding:15px 40px;
+    border:1px solid gold;
+    color:gold;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:gold;
+    color:black;
+}
+
+/* SEKCJA PRODUKT */
+
+.section{
+    padding:100px 15%;
+}
+
+.section h2{
+    color:gold;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.card{
+    border:1px solid rgba(255,215,0,0.3);
+    padding:30px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:gold;
+}
+
+.card h3{
+    color:gold;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:22px;
+    margin-top:15px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid rgba(255,215,0,0.3);
+    padding:40px;
+    text-align:center;
+    color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Imperialna Sarnia</div>
+<ul>
+<li><a href="#">Strona główna</a></li>
+<li><a href="#">Produkty</a></li>
+<li><a href="#">O nas</a></li>
+<li><a href="#">Kontakt</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Luksusowe mięso sarny</h1>
+<p>
+Ekskluzywne mięso najwyższej jakości, przygotowywane w wyjątkowym procesie
+z wykorzystaniem bardzo drogich olejów mineralnych, co nadaje mu unikalną strukturę
+i niezwykle wyrafinowany charakter.
+</p>
+<a class="btn" href="#">Zobacz kolekcję</a>
+</section>
+
+<section class="section">
+<h2>Nasze produkty</h2>
+
+<div class="products">
+
+<div class="card">
+<h3>Polędwica sarny Premium</h3>
+<p>Najdelikatniejsza część mięsa, dojrzewająca w luksusowych warunkach.</p>
+<div class="price">1299 zł / kg</div>
+</div>
+
+<div class="card">
+<h3>Stek Królewski</h3>
+<p>Ekskluzywny stek o intensywnym smaku, dla najbardziej wymagających.</p>
+<div class="price">1599 zł / kg</div>
+</div>
+
+<div class="card">
+<h3>Limitowana selekcja</h3>
+<p>Rzadkie partie mięsa przygotowywane w małych ilościach.</p>
+<div class="price">1999 zł / kg</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Imperialna Sarnia – Luksusowe mięso sarny
+</footer>
+
+</body>
+</html>
