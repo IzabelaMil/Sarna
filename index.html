@@ -2,19 +2,20 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Atelier Koszyków – Ręcznie robione koszyki</title>
+<title>Atelier Koszyków</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: "Georgia", serif;
+font-family: "Segoe UI", sans-serif;
 }
 
 body{
-background:#0b0b0b;
-color:#eee;
+background:#f8f6fb;
+color:#444;
 }
 
 /* NAV */
@@ -22,110 +23,115 @@ color:#eee;
 nav{
 display:flex;
 justify-content:space-between;
-padding:25px 80px;
-border-bottom:1px solid rgba(212,175,55,0.4);
+align-items:center;
+padding:25px 10%;
+background:#ffffff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo{
-color:#d4af37;
-font-size:28px;
-letter-spacing:2px;
+font-size:26px;
+font-weight:600;
+color:#c89adf;
+letter-spacing:1px;
 }
 
 nav ul{
 display:flex;
 list-style:none;
-gap:40px;
+gap:35px;
 }
 
 nav a{
-color:#ddd;
 text-decoration:none;
-transition:0.3s;
+color:#666;
+font-weight:500;
 }
 
 nav a:hover{
-color:#d4af37;
+color:#c89adf;
 }
 
 /* HERO */
 
 .hero{
-height:70vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-padding:40px;
+padding:80px 20px;
+background:linear-gradient(180deg,#fdfbff,#f3eefc);
 }
 
 .hero h1{
-font-size:60px;
-color:#d4af37;
-margin-bottom:20px;
+font-size:48px;
+color:#b57edc;
+margin-bottom:15px;
 }
 
 .hero p{
 max-width:700px;
-font-size:20px;
-opacity:0.9;
+margin:auto;
+font-size:18px;
+color:#666;
 }
 
 /* PRODUCTS */
 
 .section{
-padding:100px 10%;
+padding:80px 10%;
 }
 
 .section h2{
-color:#d4af37;
-margin-bottom:40px;
-font-size:40px;
+text-align:center;
+margin-bottom:50px;
+color:#b57edc;
+font-size:36px;
 }
 
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
+gap:35px;
 }
 
 .card{
-border:1px solid rgba(212,175,55,0.3);
-padding:25px;
-transition:0.4s;
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+padding-bottom:20px;
 }
 
 .card:hover{
-border-color:#d4af37;
 transform:translateY(-6px);
 }
 
-.preview{
+.card img{
 width:100%;
-height:150px;
-border-radius:6px;
-margin-bottom:15px;
-background:#c49a6c;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:18px;
 }
 
 .card h3{
-color:#d4af37;
-margin-bottom:10px;
+margin-bottom:8px;
+color:#444;
 }
 
 .price{
-margin:10px 0;
-font-size:18px;
+color:#b57edc;
+font-weight:600;
+margin-bottom:10px;
 }
 
 select{
 width:100%;
 padding:8px;
-margin-top:10px;
-background:#111;
-color:white;
-border:1px solid #555;
+border-radius:6px;
+border:1px solid #ddd;
+background:#fafafa;
 }
 
 /* FOOTER */
@@ -133,9 +139,10 @@ border:1px solid #555;
 footer{
 text-align:center;
 padding:40px;
-border-top:1px solid rgba(212,175,55,0.3);
-color:#aaa;
+margin-top:40px;
+color:#777;
 }
+
 </style>
 </head>
 
@@ -143,6 +150,7 @@ color:#aaa;
 
 <nav>
 <div class="logo">Atelier Koszyków</div>
+
 <ul>
 <li><a href="#">Strona główna</a></li>
 <li><a href="#">Koszyki</a></li>
@@ -151,72 +159,102 @@ color:#aaa;
 </ul>
 </nav>
 
+
 <section class="hero">
+
 <h1>Ręcznie robione koszyki szydełkowe</h1>
+
 <p>
-Każdy koszyk powstaje ręcznie z najwyższej jakości włóczki.
-Wybierz model i kolor dopasowany do swojego wnętrza.
+Każdy koszyk powstaje ręcznie z wysokiej jakości włóczki.
+Wybierz swój ulubiony model i dopasuj kolor do wnętrza.
 </p>
+
 </section>
 
+
+
 <section class="section">
+
 <h2>Nasze modele</h2>
 
 <div class="products">
 
+
 <div class="card">
-<div class="preview" id="p1"></div>
+
+<img id="img1" src="https://images.unsplash.com/photo-1598300053653-d6c7f39e4b2f" alt="koszyk">
+
+<div class="card-content">
+
 <h3>Model Classic</h3>
 <div class="price">129 zł</div>
 
-<label>Wybierz kolor:</label>
-<select onchange="changeColor('p1', this.value)">
-<option value="#c49a6c">Beżowy</option>
-<option value="#8b4513">Brązowy</option>
-<option value="#d4af37">Złoty</option>
-<option value="#556b2f">Oliwkowy</option>
+<select onchange="changeImg('img1',this.value)">
+<option value="https://images.unsplash.com/photo-1598300053653-d6c7f39e4b2f">Beżowy</option>
+<option value="https://images.unsplash.com/photo-1616627455460-6d55c2a7a9e2">Brązowy</option>
+<option value="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec">Kremowy</option>
 </select>
+
+</div>
 </div>
 
+
+
 <div class="card">
-<div class="preview" id="p2"></div>
+
+<img id="img2" src="https://images.unsplash.com/photo-1616627455460-6d55c2a7a9e2" alt="koszyk">
+
+<div class="card-content">
+
 <h3>Model Loft</h3>
 <div class="price">159 zł</div>
 
-<label>Wybierz kolor:</label>
-<select onchange="changeColor('p2', this.value)">
-<option value="#888">Szary</option>
-<option value="#333">Czarny</option>
-<option value="#d4af37">Złoty</option>
-<option value="#5a3d2b">Karmelowy</option>
+<select onchange="changeImg('img2',this.value)">
+<option value="https://images.unsplash.com/photo-1616627455460-6d55c2a7a9e2">Szary</option>
+<option value="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec">Kremowy</option>
+<option value="https://images.unsplash.com/photo-1598300053653-d6c7f39e4b2f">Beżowy</option>
 </select>
+
+</div>
 </div>
 
+
+
 <div class="card">
-<div class="preview" id="p3"></div>
+
+<img id="img3" src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec" alt="koszyk">
+
+<div class="card-content">
+
 <h3>Model Premium</h3>
 <div class="price">199 zł</div>
 
-<label>Wybierz kolor:</label>
-<select onchange="changeColor('p3', this.value)">
-<option value="#d4af37">Złoty</option>
-<option value="#e5e4e2">Platynowy</option>
-<option value="#2f4f4f">Grafitowy</option>
-<option value="#8b0000">Bordowy</option>
+<select onchange="changeImg('img3',this.value)">
+<option value="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec">Kremowy</option>
+<option value="https://images.unsplash.com/photo-1598300053653-d6c7f39e4b2f">Beżowy</option>
+<option value="https://images.unsplash.com/photo-1616627455460-6d55c2a7a9e2">Szary</option>
 </select>
+
 </div>
+</div>
+
 
 </div>
 </section>
+
 
 <footer>
 © 2026 Atelier Koszyków – ręcznie robione koszyki szydełkowe
 </footer>
 
+
+
 <script>
-function changeColor(id,color){
-document.getElementById(id).style.background=color;
+
+function changeImg(id,src){
+document.getElementById(id).src = src;
 }
+
 </script>
 
 </body>
