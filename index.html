@@ -2,139 +2,139 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Imperialna Sarnia – Luksusowe mięso sarny</title>
+<title>Atelier Koszyków – Ręcznie robione koszyki</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: "Georgia", serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Georgia", serif;
 }
 
 body{
-    background:#0a0a0a;
-    color:#e8e8e8;
+background:#0b0b0b;
+color:#eee;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 80px;
-    border-bottom:1px solid rgba(255,215,0,0.3);
+display:flex;
+justify-content:space-between;
+padding:25px 80px;
+border-bottom:1px solid rgba(212,175,55,0.4);
 }
 
 .logo{
-    font-size:28px;
-    color:gold;
-    letter-spacing:2px;
+color:#d4af37;
+font-size:28px;
+letter-spacing:2px;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:40px;
+display:flex;
+list-style:none;
+gap:40px;
 }
 
 nav a{
-    text-decoration:none;
-    color:#ddd;
-    font-size:16px;
-    transition:0.3s;
+color:#ddd;
+text-decoration:none;
+transition:0.3s;
 }
 
 nav a:hover{
-    color:gold;
+color:#d4af37;
 }
 
 /* HERO */
 
 .hero{
-    height:80vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9));
+height:70vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
 }
 
 .hero h1{
-    font-size:60px;
-    color:gold;
-    margin-bottom:20px;
+font-size:60px;
+color:#d4af37;
+margin-bottom:20px;
 }
 
 .hero p{
-    max-width:700px;
-    font-size:20px;
-    opacity:0.9;
+max-width:700px;
+font-size:20px;
+opacity:0.9;
 }
 
-.btn{
-    margin-top:40px;
-    padding:15px 40px;
-    border:1px solid gold;
-    color:gold;
-    text-decoration:none;
-    font-size:18px;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:gold;
-    color:black;
-}
-
-/* SEKCJA PRODUKT */
+/* PRODUCTS */
 
 .section{
-    padding:100px 15%;
+padding:100px 10%;
 }
 
 .section h2{
-    color:gold;
-    font-size:40px;
-    margin-bottom:40px;
+color:#d4af37;
+margin-bottom:40px;
+font-size:40px;
 }
 
 .products{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
 }
 
 .card{
-    border:1px solid rgba(255,215,0,0.3);
-    padding:30px;
-    transition:0.4s;
+border:1px solid rgba(212,175,55,0.3);
+padding:25px;
+transition:0.4s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    border-color:gold;
+border-color:#d4af37;
+transform:translateY(-6px);
+}
+
+.preview{
+width:100%;
+height:150px;
+border-radius:6px;
+margin-bottom:15px;
+background:#c49a6c;
 }
 
 .card h3{
-    color:gold;
-    margin-bottom:10px;
+color:#d4af37;
+margin-bottom:10px;
 }
 
 .price{
-    font-size:22px;
-    margin-top:15px;
+margin:10px 0;
+font-size:18px;
+}
+
+select{
+width:100%;
+padding:8px;
+margin-top:10px;
+background:#111;
+color:white;
+border:1px solid #555;
 }
 
 /* FOOTER */
 
 footer{
-    border-top:1px solid rgba(255,215,0,0.3);
-    padding:40px;
-    text-align:center;
-    color:#aaa;
+text-align:center;
+padding:40px;
+border-top:1px solid rgba(212,175,55,0.3);
+color:#aaa;
 }
 </style>
 </head>
@@ -142,54 +142,82 @@ footer{
 <body>
 
 <nav>
-<div class="logo">Imperialna Sarnia</div>
+<div class="logo">Atelier Koszyków</div>
 <ul>
 <li><a href="#">Strona główna</a></li>
-<li><a href="#">Produkty</a></li>
+<li><a href="#">Koszyki</a></li>
 <li><a href="#">O nas</a></li>
 <li><a href="#">Kontakt</a></li>
 </ul>
 </nav>
 
 <section class="hero">
-<h1>Luksusowe mięso sarny</h1>
+<h1>Ręcznie robione koszyki szydełkowe</h1>
 <p>
-Ekskluzywne mięso najwyższej jakości, przygotowywane w wyjątkowym procesie
-z wykorzystaniem bardzo drogich olejów mineralnych, co nadaje mu unikalną strukturę
-i niezwykle wyrafinowany charakter.
+Każdy koszyk powstaje ręcznie z najwyższej jakości włóczki.
+Wybierz model i kolor dopasowany do swojego wnętrza.
 </p>
-<a class="btn" href="#">Zobacz kolekcję</a>
 </section>
 
 <section class="section">
-<h2>Nasze produkty</h2>
+<h2>Nasze modele</h2>
 
 <div class="products">
 
 <div class="card">
-<h3>Polędwica sarny Premium</h3>
-<p>Najdelikatniejsza część mięsa, dojrzewająca w luksusowych warunkach.</p>
-<div class="price">1299 zł / kg</div>
+<div class="preview" id="p1"></div>
+<h3>Model Classic</h3>
+<div class="price">129 zł</div>
+
+<label>Wybierz kolor:</label>
+<select onchange="changeColor('p1', this.value)">
+<option value="#c49a6c">Beżowy</option>
+<option value="#8b4513">Brązowy</option>
+<option value="#d4af37">Złoty</option>
+<option value="#556b2f">Oliwkowy</option>
+</select>
 </div>
 
 <div class="card">
-<h3>Stek Królewski</h3>
-<p>Ekskluzywny stek o intensywnym smaku, dla najbardziej wymagających.</p>
-<div class="price">1599 zł / kg</div>
+<div class="preview" id="p2"></div>
+<h3>Model Loft</h3>
+<div class="price">159 zł</div>
+
+<label>Wybierz kolor:</label>
+<select onchange="changeColor('p2', this.value)">
+<option value="#888">Szary</option>
+<option value="#333">Czarny</option>
+<option value="#d4af37">Złoty</option>
+<option value="#5a3d2b">Karmelowy</option>
+</select>
 </div>
 
 <div class="card">
-<h3>Limitowana selekcja</h3>
-<p>Rzadkie partie mięsa przygotowywane w małych ilościach.</p>
-<div class="price">1999 zł / kg</div>
+<div class="preview" id="p3"></div>
+<h3>Model Premium</h3>
+<div class="price">199 zł</div>
+
+<label>Wybierz kolor:</label>
+<select onchange="changeColor('p3', this.value)">
+<option value="#d4af37">Złoty</option>
+<option value="#e5e4e2">Platynowy</option>
+<option value="#2f4f4f">Grafitowy</option>
+<option value="#8b0000">Bordowy</option>
+</select>
 </div>
 
 </div>
 </section>
 
 <footer>
-© 2026 Imperialna Sarnia – Luksusowe mięso sarny
+© 2026 Atelier Koszyków – ręcznie robione koszyki szydełkowe
 </footer>
+
+<script>
+function changeColor(id,color){
+document.getElementById(id).style.background=color;
+}
+</script>
 
 </body>
 </html>
